@@ -16,6 +16,8 @@
         "contacts",
     ],
     "data": [
+        "security/ir.model.access.csv",
+        "views/alfinf_factura_view.xml",
     ],
     "installable": True,
 }
