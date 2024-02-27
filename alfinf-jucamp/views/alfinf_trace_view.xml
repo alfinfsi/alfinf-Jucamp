@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_alfinf_trace_form" model="ir.ui.view">
+            <field name="name">alfinf.trace.form</field>
+            <field name="model">alfinf.trace</field>
+            <field name="inherit_id" ref="alfinf-connector.view_alfinf_trace_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tz_hectarea']" position="after">
+                    <field name="tz_ciclo"/>
+                </xpath>
+                <xpath expr="//field[@name='tz_planta']" position="after">
+                    <field name="tz_activa"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

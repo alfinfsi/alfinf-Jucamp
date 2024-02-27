@@ -17,7 +17,7 @@
     ],
     "data": [
         "security/ir.model.access.csv",
-        "views/alfinf_factura_view.xml",
+        "views/alfinf_trace_view.xml",
     ],
     "installable": True,
 }
