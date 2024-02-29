@@ -13,8 +13,16 @@ class AlfinfTraceCommerce(models.Model):
         string='Codigo de traza commerce',
     )
 
-    finca_id = fields.Many2one(
-        string='Finca',
-        comodel_name='alfinf.finca',
+    recinto_id = fields.Many2one(
+        string='Parcela',
+        comodel_name='alfinf.recinto',
         inverse_name='tracecommerce_ids'
     )
+
+    #variedad_id = fields.One2many('alfinf.variedad', 'tracecommerce_id', string='Variedad')
+
+    #@api.constrains('variedad_id')
+    #def _check_unique_relation(self):
+    #    for record in self:
+    #        if len(record.variedad_id) > 1:
+    #            raise ValidationError("Una dirección solo puede estar asociada a una traza.")

@@ -16,10 +16,7 @@
                     </div>
                     <group>
                         <group>
-
-                        </group>
-                        <group>
-
+                            <field name="recinto_id"/>
                         </group>
                     </group>
                 </sheet>
@@ -34,6 +31,8 @@
         <field name="arch" type="xml">
         <!-- Tabla de trazas -->
             <tree string="Trazas" multi_edit="1" duplicate="false" sample="1">
+                <field name="traza"/>
+                <field name="recinto_id"/>
             </tree>
         </field>
     </record>
