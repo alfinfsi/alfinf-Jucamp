@@ -8,7 +8,12 @@ class AlfinfFinca(models.Model):
     _inherit = 'alfinf.finca'
 
     tracecommerce_ids = fields.One2many(
-        string='Trazas en esta finca',
+        string='Trazas commerce en esta finca',
         comodel_name='alfinf.tracecommerce',
+        inverse_name='finca_id'
+    )
+    tracecoste_ids = fields.One2many(
+        string='Trazas coste en esta finca',
+        comodel_name='alfinf.tracecoste',
         inverse_name='finca_id'
     )
