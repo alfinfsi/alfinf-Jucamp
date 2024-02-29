@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_alfinf_tracecommerce_form" model="ir.ui.view">
+        <field name="name">alfinf.tracecommerce.form</field>
+        <field name="model">alfinf.tracecommerce</field>
+        <field name="arch" type="xml">
+            <form string="Trace">
+                <sheet name="tracecommerce_form">
+                    <div class="oe_title">
+                        <label for="traza" string="Traza"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break" name="traza" placeholder="Traza X..."/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="alfinf_tracecommerce_tree_view" model="ir.ui.view">
+        <field name="name">alfinf.tracecommerce.tree.view</field>
+        <field name="model">alfinf.tracecommerce</field>
+        <field eval="7" name="priority"/>
+        <field name="arch" type="xml">
+        <!-- Tabla de trazas -->
+            <tree string="Trazas" multi_edit="1" duplicate="false" sample="1">
+            </tree>
+        </field>
+    </record>
+
+    <record id="alfinf_tracecommerce_search" model="ir.ui.view">
+        <field name="name">alfinf.tracecommerce.search</field>
+        <field name="model">alfinf.tracecommerce</field>
+        <field name="arch" type="xml">
+            <search string="Trazas busqueda">
+
+            </search>
+        </field>
+    </record>
+    <record id="action_alfinf_tracecommerce" model="ir.actions.act_window">
+        <field name="name">Trazas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alfinf.tracecommerce</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="alfinf-jucamp.alfinf_tracecommerce_tree_view"/>
+        <field name="search_view_id" ref="alfinf-jucamp.alfinf_tracecommerce_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea una nueva traza
+            </p>
+            <p>
+                Puedes crear una nueva traza, para asociarla a un cliente.
+            </p>
+        </field>
+    </record>
+    <menuitem
+        id="menu_alfinf_tracecommerce"
+        name="Trazas"
+        parent="sale.sale_menu_root"
+        sequence="50"
+        action="alfinf-jucamp.action_alfinf_tracecommerce"
+        groups="base.group_system"
+    />
+</odoo>
