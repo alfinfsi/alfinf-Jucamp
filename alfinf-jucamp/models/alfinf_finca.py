@@ -12,13 +12,13 @@ class AlfinfFinca(models.Model):
         comodel_name='alfinf.tracecommerce',
         inverse_name='finca_id'
     )
-    tracecoste_ids = fields.One2many(
-        string='Trazas coste en esta finca',
-        comodel_name='alfinf.tracecoste',
-        inverse_name='finca_id'
-    )
-    variedad_id = fields.One2many(
-        string='Variedad',
-        comodel_name='alfinf.variedad',
-        inverse_name='finca_id'
-    )
+    #tracecoste_ids = fields.One2many(
+    #    string='Trazas coste en esta finca',
+    #    comodel_name='alfinf.tracecoste',
+    #    inverse_name='finca_id'
+    #)
+    #variedad_id = fields.One2many(
+    #    string='Variedad',
+    #    comodel_name='alfinf.variedad',
+    #    inverse_name='finca_id'
+    #)

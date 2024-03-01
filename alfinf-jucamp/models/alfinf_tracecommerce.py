@@ -19,6 +19,12 @@ class AlfinfTraceCommerce(models.Model):
         inverse_name='tracecommerce_ids'
     )
 
+    finca_id = fields.One2many(
+        string='Finca',
+        comodel_name='alfinf.finca',
+        inverse_name='tracecommerce_ids'
+    )
+
     #variedad_id = fields.One2many('alfinf.variedad', 'tracecommerce_id', string='Variedad')
 
     #@api.constrains('variedad_id')
