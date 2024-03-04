@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_alfinf_marca_form" model="ir.ui.view">
+        <field name="name">alfinf.marca.form</field>
+        <field name="model">alfinf.marca</field>
+        <field name="arch" type="xml">
+            <form string="Marca">
+                <sheet name="marca_form">
+                    <div class="oe_title">
+                        <label for="mc_marca" string="Nombre"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break text-capitalize" name="mc_marca" placeholder="Nombre de la marca..."/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="mc_alias" placeholder="Alias de la marca..."/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="alfinf_marca_tree_view" model="ir.ui.view">
+        <field name="name">alfinf.marca.tree.view</field>
+        <field name="model">alfinf.marca</field>
+        <field eval="7" name="priority"/>
+        <field name="arch" type="xml">
+        <!-- Tabla de marcas -->
+            <tree string="Marcas" multi_edit="1" duplicate="false" sample="1">
+                <field name="mc_marca"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="alfinf_marca_search" model="ir.ui.view">
+        <field name="name">alfinf.marca.search</field>
+        <field name="model">alfinf.marca</field>
+        <field name="arch" type="xml">
+            <search string="Marcas busqueda">
+            </search>
+        </field>
+    </record>
+
+    <record id="action_alfinf_marca" model="ir.actions.act_window">
+        <field name="name">Marcas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">alfinf.marca</field>
+        <field name="view_mode">kanban,tree,form,activity</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="alfinf-jucamp.alfinf_marca_tree_view"/>
+        <field name="search_view_id" ref="alfinf-jucamp.alfinf_marca_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea una nueva marca
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_alfinf_marca"
+        name="Marcas"
+        sequence="50"
+        parent="sale.sale_menu_root"
+        action="action_alfinf_marca"
+    />
+
+</odoo>
