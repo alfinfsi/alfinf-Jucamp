@@ -7,16 +7,11 @@ from odoo import fields, models
 class AlfinfFinca(models.Model):
     _inherit = 'alfinf.finca'
 
-    tracecommerce_ids = fields.One2many(
-        string='Trazas commerce en esta finca',
+    tracecommerce_ids = fields.Many2one(
+        string='Tracecommerce',
         comodel_name='alfinf.tracecommerce',
-        inverse_name='finca_id'
+        inverse_name='variedad_id'
     )
-    #tracecoste_ids = fields.One2many(
-    #    string='Trazas coste en esta finca',
-    #    comodel_name='alfinf.tracecoste',
-    #    inverse_name='finca_id'
-    #)
     #variedad_id = fields.One2many(
     #    string='Variedad',
     #    comodel_name='alfinf.variedad',

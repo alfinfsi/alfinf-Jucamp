@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!-- Modificar vista alfinf_recinto_form-->
+        
+
+        <record id="view_alfinf_recinto_form" model="ir.ui.view">
+            <field name="name">alfinf.recinto.form</field>
+            <field name="model">alfinf.recinto</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='recinto']" position="before">
+                    <field name="tracecommerce_ids"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

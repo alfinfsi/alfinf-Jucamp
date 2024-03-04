@@ -25,7 +25,11 @@ class AlfinfTraceCommerce(models.Model):
         inverse_name='tracecommerce_ids'
     )
 
-    #variedad_id = fields.One2many('alfinf.variedad', 'tracecommerce_id', string='Variedad')
+    #variedad_id = fields.One2many(
+    #    string='Variedad',
+    #    comodel_name='alfinf.variedad_id',
+    #    inverse_name='tracecommerce_ids'
+    #)
 
     #@api.constrains('variedad_id')
     #def _check_unique_relation(self):
