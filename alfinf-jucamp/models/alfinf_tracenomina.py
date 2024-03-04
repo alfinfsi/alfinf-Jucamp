@@ -5,24 +5,24 @@ import string
 from odoo import fields, models
 
 
-class AlfinfTraceCommerce(models.Model):
-    _name = 'alfinf.tracecommerce'
-    _description = 'Trazas para el control de gastos de comercio.'
+class AlfinfTraceNomina(models.Model):
+    _name = 'alfinf.tracenomina'
+    _description = 'Trazas para el control de gastos de nominas.'
 
     traza = fields.Char(
-        string='Codigo de traza commerce',
+        string='Codigo de traza nominas',
     )
 
     parcela_id = fields.Many2one(
         string='Parcela',
         comodel_name='alfinf.parcela',
-        inverse_name='tracecommerce_ids'
+        inverse_name='tracenomina_ids'
     )
 
     finca_id = fields.One2many(
         string='Finca',
         comodel_name='alfinf.finca',
-        inverse_name='tracecommerce_ids'
+        inverse_name='tracenomina_ids'
     )
 
     #variedad_id = fields.One2many(

@@ -4,7 +4,7 @@ from . import (
     alfinf_parcela,
     alfinf_trace,
     alfinf_trace,
-    alfinf_tracecommerce,
+    alfinf_tracenomina,
     alfinf_tracecoste,
     alfinf_variedad
     )

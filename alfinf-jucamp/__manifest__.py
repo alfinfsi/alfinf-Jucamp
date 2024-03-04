@@ -18,7 +18,7 @@
     "data": [
         "security/ir.model.access.csv",
         "views/alfinf_trace_view.xml",
-        "views/alfinf_tracecommerce_view.xml",
+        "views/alfinf_tracenomina_view.xml",
         "views/alfinf_tracecoste_view.xml",
         "views/alfinf_parcela_view.xml",
         "views/alfinf_marca_view.xml",
