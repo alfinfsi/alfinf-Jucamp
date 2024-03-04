@@ -63,7 +63,7 @@
     <menuitem
         id="menu_alfinf_marca"
         name="Marcas"
-        sequence="50"
+        sequence="141"
         parent="sale.sale_menu_root"
         action="action_alfinf_marca"
     />

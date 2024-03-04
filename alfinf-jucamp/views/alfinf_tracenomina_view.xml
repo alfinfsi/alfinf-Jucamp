@@ -64,7 +64,7 @@
         id="menu_alfinf_tracenomina"
         name="Trazas Nomina"
         parent="sale.sale_menu_root"
-        sequence="50"
+        sequence="133"
         action="alfinf-jucamp.action_alfinf_tracenomina"
         groups="base.group_system"
     />

@@ -68,7 +68,7 @@
         id="menu_alfinf_tracecoste"
         name="Trazas coste"
         parent="sale.sale_menu_root"
-        sequence="50"
+        sequence="132"
         action="alfinf-jucamp.action_alfinf_tracecoste"
         groups="base.group_system"
     />
