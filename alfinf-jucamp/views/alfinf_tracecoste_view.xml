@@ -15,12 +15,7 @@
                         </h1>
                     </div>
                     <group>
-                        <group>
-
-                        </group>
-                        <group>
-
-                        </group>
+                        <field name="finca_id"/>
                     </group>
                 </sheet>
             </form>
