@@ -1,7 +1,7 @@
 from . import (
     alfinf_finca,
     alfinf_marca,
-    alfinf_recinto,
+    alfinf_parcela,
     alfinf_trace,
     alfinf_trace,
     alfinf_tracecommerce,

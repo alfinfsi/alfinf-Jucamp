@@ -13,9 +13,9 @@ class AlfinfTraceCommerce(models.Model):
         string='Codigo de traza commerce',
     )
 
-    recinto_id = fields.Many2one(
+    parcela_id = fields.Many2one(
         string='Parcela',
-        comodel_name='alfinf.recinto',
+        comodel_name='alfinf.parcela',
         inverse_name='tracecommerce_ids'
     )
 
