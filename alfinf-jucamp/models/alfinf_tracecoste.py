@@ -8,13 +8,14 @@ from odoo import fields, models
 class AlfinfTraceCoste(models.Model):
     _name = 'alfinf.tracecoste'
     _description = 'Trazas para el control de gastos de coste.'
+    _rec_name='traza'
 
     traza = fields.Char(
         string='Codigo de traza commerce',
     )
-
-    finca_id = fields.Many2one(
-        string='Finca',
-        comodel_name='alfinf.finca',
+    recinto_id = fields.Many2one(
+        string='Recinto',
+        comodel_name='alfinf.recinto',
         inverse_name='tracecoste_ids'
     )
+

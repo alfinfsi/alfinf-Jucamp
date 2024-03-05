@@ -3,3 +3,4 @@ access_alfinf_tracenomina_user,access_alfinf_tracenomina_user,model_alfinf_trace
 access_alfinf_tracecoste_user,access_alfinf_tracecoste_user,model_alfinf_tracecoste,base.group_user,1,1,1,1
 access_alfinf_marca_user,access_alfinf_marca_user,model_alfinf_marca,base.group_user,1,1,1,1
 access_alfinf_parcela_user,access_alfinf_parcela_user,model_alfinf_parcela,base.group_user,1,1,1,1
+access_alfinf_recinto_user,access_alfinf_recinto_user,model_alfinf_recinto,base.group_user,1,1,1,1

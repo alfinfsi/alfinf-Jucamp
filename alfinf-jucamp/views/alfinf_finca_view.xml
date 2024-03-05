@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_alfinf_finca_form" model="ir.ui.view">
+            <field name="name">alfinf.finca.form</field>
+            <field name="model">alfinf.finca</field>
+            <field name="inherit_id" ref="alfinf-connector.view_alfinf_finca_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='trace_ids']" position="replace">
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

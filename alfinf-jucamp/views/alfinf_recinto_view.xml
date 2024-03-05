@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_alfinf_recinto_form" model="ir.ui.view">
+            <field name="name">alfinf.recinto.form</field>
+            <field name="model">alfinf.recinto</field>
+            <field name="arch" type="xml">
+                <form string="Recinto">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="parcela_id"/>
+                            <field name="variedad_id"/>
+                            <field name="trace_ids"/>
+                            <field name="tracecoste_ids"/>
+                            <field name="tracenomina_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="alfinf_recinto_tree_view" model="ir.ui.view">
+            <field name="name">alfinf.recinto.tree.view</field>
+            <field name="model">alfinf.recinto</field>
+            <field eval="7" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Recintos" multi_edit="1" duplicate="false" sample="1">
+                    <field name="nombre"/>
+                    <field name="variedad_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="alfinf_recinto_search" model="ir.ui.view">
+            <field name="name">alfinf.recinto.search</field>
+            <field name="model">alfinf.recinto</field>
+            <field name="arch" type="xml">
+                <search string="Recintos busqueda">
+                </search>
+            </field>
+        </record>
+
+        <record id="action_alfinf_recinto" model="ir.actions.act_window">
+            <field name="name">Recintos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">alfinf.recinto</field>
+            <field name="view_mode">kanban,tree,form,activity</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="alfinf-jucamp.alfinf_recinto_tree_view"/>
+            <field name="search_view_id" ref="alfinf-jucamp.alfinf_recinto_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crea un nuevo recinto
+                </p>
+                <p>
+                    Puedes crear un nuevo recinto, para asociarla a un cliente.
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="menu_alfinf_recintos"
+            name="Recintos"
+            parent="sale.sale_menu_root"
+            sequence="122"
+            action="alfinf-jucamp.action_alfinf_recinto"
+            groups="base.group_system"
+        />
+    </data>
+</odoo>

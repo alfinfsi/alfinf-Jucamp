@@ -6,8 +6,8 @@
             <field name="model">alfinf.parcela</field>
             <field name="inherit_id" ref="alfinf-connector.view_alfinf_parcela_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='traza_id']" position="before">
-                    <field name="tracenomina_ids"/>
+                <xpath expr="//field[@name='finca_id']" position="after">
+                    <field name="recintos_ids"/>
                 </xpath>
             </field>
         </record>

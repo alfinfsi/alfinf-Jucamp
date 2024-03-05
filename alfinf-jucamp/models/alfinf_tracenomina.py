@@ -8,6 +8,7 @@ from odoo import fields, models
 class AlfinfTraceNomina(models.Model):
     _name = 'alfinf.tracenomina'
     _description = 'Trazas para el control de gastos de nominas.'
+    _rec_name='traza'
 
     traza = fields.Char(
         string='Codigo de traza nominas',
@@ -18,18 +19,11 @@ class AlfinfTraceNomina(models.Model):
         comodel_name='alfinf.parcela',
         inverse_name='tracenomina_ids'
     )
-
-    finca_id = fields.One2many(
-        string='Finca',
-        comodel_name='alfinf.finca',
+    recinto_id = fields.Many2one(
+        string='Recinto',
+        comodel_name='alfinf.recinto',
         inverse_name='tracenomina_ids'
     )
-
-    #variedad_id = fields.One2many(
-    #    string='Variedad',
-    #    comodel_name='alfinf.variedad_id',
-    #    inverse_name='tracecommerce_ids'
-    #)
 
     #@api.constrains('variedad_id')
     #def _check_unique_relation(self):
