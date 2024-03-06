@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_alfinf_vivero_form" model="ir.ui.view">
+            <field name="name">alfinf.vivero.form</field>
+            <field name="model">alfinf.vivero</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_alfinf_vivero_tree" model="ir.ui.view">
+            <field name="name">alfinf.vivero.tree</field>
+            <field name="model">alfinf.vivero</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_alfinf_vivero" model="ir.actions.act_window">
+            <field name="name">Viveros</field>
+            <field name="res_model">alfinf.vivero</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_alfinf_vivero"
+            name="Viveros"
+            sequence="113"
+            parent="sale.sale_menu_root"
+            action="action_alfinf_vivero"
+        />
+    </data>
+</odoo>
