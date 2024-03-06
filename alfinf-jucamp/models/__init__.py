@@ -6,6 +6,5 @@ from . import (
     alfinf_trace,
     alfinf_tracenomina,
     alfinf_tracecoste,
-    alfinf_variedad,
-    alfinf_recinto
+    alfinf_variedad
     )

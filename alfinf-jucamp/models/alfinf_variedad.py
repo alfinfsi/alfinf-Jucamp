@@ -12,8 +12,4 @@ class AlfinfVariedad(models.Model):
         comodel_name='alfinf.tracecommerce',
         inverse_name='variedad_id'
     )
-    recinto_ids = fields.One2many(
-        string='Recintos',
-        comodel_name='alfinf.recinto',
-        inverse_name='variedad_id'
-    )
+

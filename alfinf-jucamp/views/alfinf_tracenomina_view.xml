@@ -14,11 +14,6 @@
                             </div>
                         </h1>
                     </div>
-                    <group>
-                        <group>
-                            <field name="parcela_id"/>
-                        </group>
-                    </group>
                 </sheet>
             </form>
         </field>
@@ -32,7 +27,6 @@
         <!-- Tabla de trazas -->
             <tree string="Trazas" multi_edit="1" duplicate="false" sample="1">
                 <field name="traza"/>
-                <field name="parcela_id"/>
             </tree>
         </field>
     </record>

@@ -14,6 +14,7 @@
         "sale",
         "sale_management",
         "contacts",
+        "l10n_es_toponyms"
     ],
     "data": [
         "security/ir.model.access.csv",
@@ -22,7 +23,6 @@
         "views/alfinf_tracecoste_view.xml",
         "views/alfinf_parcela_view.xml",
         "views/alfinf_finca_view.xml",
-        "views/alfinf_recinto_view.xml",
         "views/alfinf_marca_view.xml",
     ],
     "installable": True,

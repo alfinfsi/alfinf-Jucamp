@@ -7,8 +7,6 @@ from odoo import fields, models
 class AlfinfFinca(models.Model):
     _inherit = 'alfinf.finca'
 
-    #variedad_id = fields.One2many(
-    #    string='Variedad',
-    #    comodel_name='alfinf.variedad',
-    #    inverse_name='finca_id'
-    #)
+    hectareas_producidas = fields.Float(
+        string ='Superficie'
+    )

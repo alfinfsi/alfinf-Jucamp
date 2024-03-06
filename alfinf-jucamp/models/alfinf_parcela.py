@@ -7,13 +7,40 @@ from odoo import fields, models
 class AlfinfParcela(models.Model):
     _inherit = 'alfinf.parcela'
 
-    #variedad_id = fields.One2many(
-    #    string='Variedad',
-    #    comodel_name='alfinf.variedad',
-    #    inverse_name='finca_id'
-    #)
-    recintos_ids = fields.One2many(
-        string='Recintos',
-        comodel_name='alfinf.recinto',
-        inverse_name='parcela_id'
+    nombre = fields.Char(
+        string='Parcela',
+    )
+    recinto = fields.Integer(
+        string='Recinto'
+    )
+    sector = fields.Char(
+        string='Sector',
+    )
+    poligono = fields.Char(
+        string='Poligono',
+        required=True,
+    )
+    trace_id = fields.Many2one(
+        string='Trazabilidad',
+        comodel_name='alfinf.traza',
+        inverse_name='parcela_id',
+    )
+    trazacoste_id = fields.Many2one(
+        string='Trazacoste',
+        comodel_name='alfinf.trazacoste',
+        inverse_name='parcela_id',
+    )
+    trazanomina_id = fields.Many2one(
+        string='Trazanomina',
+        comodel_name='alfinf.tracenomina',
+        inverse_name='parcela_id',
+    )
+    variedad_id = fields.Many2one(
+        string='Variedad',
+        comodel_name='alfinf.variedad',
+        inverse_name='parcela_id',
+    )
+    municipio_id = fields.Many2one(
+        string='ciudad',
+        comodel_name='res.city'
     )

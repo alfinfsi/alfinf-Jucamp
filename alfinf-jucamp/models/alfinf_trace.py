@@ -14,9 +14,8 @@ class AlfinfTrace(models.Model):
     tz_activa = fields.Char(
         string='Activa'
     )
-
-    recinto_id = fields.Many2one(
-        string='Recinto',
-        comodel_name='alfinf.recinto',
-        inverse_name='trace_ids'
+    parcelas_ids = fields.One2many(
+        string='Parcelas',
+        comodel_name='alfinf.parcela',
+        inverse_name='trace_id'
     )
