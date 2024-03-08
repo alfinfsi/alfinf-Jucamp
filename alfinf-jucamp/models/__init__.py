@@ -9,4 +9,5 @@ from . import (
     alfinf_vivero,
     alfinf_variedad,
     alfinf_tipoplantacion,
+    res_partner,
     )

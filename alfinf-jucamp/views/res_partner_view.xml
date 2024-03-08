@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_partner_view_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="cl_cif"/>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="is_trace"/>
+                    <field name="cont_id"/>
+                </xpath>
+                <notebook position="inside">
+                    <page
+                        name="trace_page"
+                        string="Trazas costes"
+                        attrs="{'invisible': [('is_trace', '!=', True)]}">
+                        <group string="Trazas" name="traces">
+                            <field name="alfinf_tracecoste_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="traza"/>
+                                    <field name="parcela_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page
+                        name="trace_page"
+                        string="Trazas nomina"
+                        attrs="{'invisible': [('is_trace', '!=', True)]}">
+                        <group string="Trazas" name="traces">
+                            <field name="alfinf_tracenomina_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="traza"/>
+                                    <field name="parcela_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>

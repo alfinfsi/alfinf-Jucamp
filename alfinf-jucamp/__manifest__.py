@@ -25,6 +25,7 @@
         "views/alfinf_finca_view.xml",
         "views/alfinf_marca_view.xml",
         "views/alfinf_vivero_view.xml",
+        "views/res_partner_view.xml",
     ],
     "installable": True,
 }
