@@ -44,3 +44,9 @@ class AlfinfParcela(models.Model):
         string='ciudad',
         comodel_name='res.city'
     )
+    tipoplantacion_id = fields.Many2one(
+        string='Tipo de Plantacion',
+        comodel_name='alfinf.tipoplantacion',
+        inverse_name='parcelas_ids',
+    )
+

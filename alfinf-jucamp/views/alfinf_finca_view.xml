@@ -7,7 +7,6 @@
             <field name="inherit_id" ref="alfinf-connector.view_alfinf_finca_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='trace_ids']" position="replace">
-
                 </xpath>
             </field>
         </record>

@@ -7,14 +7,42 @@
             <field name="inherit_id" ref="alfinf-connector.view_alfinf_parcela_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='finca_id']" position="after">
-                    <field name='municipio_id'/>
-                    <field name='recinto'/>
-                    <field name='sector'/>
-                    <field name='poligono'/>
-                    <field name='variedad_id'/>
-                    <field name='traza_id'/>
-                    <!--<field name='trazacoste_id'/>-->
-                    <field name='trazanomina_id'/>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 d-flex">
+                                <label for='municipio_id'/>
+                                <field name='municipio_id'/>
+                            </div>
+                            <div class="col-3 d-flex">
+                            <label for='recinto'/>
+                            <field name='recinto'/>
+                            </div>
+                            <div class="col-3 d-flex">
+                                <label for='sector'/>
+                                <field name='sector'/>
+                            </div>
+                            <div class="col-3 d-flex">
+                                <label for='poligono'/>
+                                <field name='poligono'/>
+                            </div>
+                            <div class="col-3 d-flex">
+                                <label for='variedad_id'/>
+                                <field name='variedad_id'/>
+                            </div>
+                            <div class="col-3 d-flex">
+                                <label for='tipoplantacion_id'/>
+                                <field name='tipoplantacion_id'/>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <label for='traza_id'/>
+                                <field name='traza_id'/>
+                            </div>
+                            <div class="col-12 d-flex">
+                                <label for='trazanomina_id'/>
+                                <field name='trazanomina_id'/>
+                            </div>
+                        </div>
+                    </div>
                 </xpath>
             </field>
         </record>

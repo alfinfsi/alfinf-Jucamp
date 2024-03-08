@@ -14,6 +14,12 @@ class AlfinfTraceNomina(models.Model):
         string='Codigo de traza nominas',
     )
 
+    parcela_id= fields.Many2one(
+        string='Parcela',
+        comodel_name='alfinf.parcela',
+        inverse_name='trazanomina_id',
+    )
+
     #@api.constrains('variedad_id')
     #def _check_unique_relation(self):
     #    for record in self:
